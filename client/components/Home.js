@@ -1,11 +1,20 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const Home = () => {
+const Home = (props) => {
+  //mapstate to props
+  const { username } = props;
   return (
     <div>
-      <h1>Home Screen</h1>
+      <h1>Hi, {username}</h1>
     </div>
   );
 };
 
-export default Home;
+const mapState = (state) => {
+  return {
+    username: state.auth.username,
+  };
+};
+
+export default connect(mapState)(Home);
