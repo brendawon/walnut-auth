@@ -15,6 +15,10 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+//access auth and api routes
+app.use("/auth", require("./auth"));
+app.use("/api", require("./api"));
+
 //home page
 app.get("/", (req, res, next) => {
   res.sendFile(path.join(__dirname, "..", "public/index.html"));

@@ -4,6 +4,10 @@ const config = {
   logging: false,
 };
 
+if (process.env.LOGGING) {
+  delete config.logging;
+}
+
 if (process.env.DATABASE_URL) {
   config.dialectOptions = {
     ssl: {
