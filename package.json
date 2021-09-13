@@ -4,6 +4,7 @@
   "description": "Users can sign up and log in using a username and password",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "start": "node server",
     "seed": "node script/seed.js",
     "start-dev": "webpack -w & nodemon server",
