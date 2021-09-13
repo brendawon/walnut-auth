@@ -7,16 +7,66 @@ const Login = (props) => {
   const { handleSubmit, error } = props;
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input name="username" />
-        <input name="password" />
-        <div>
-          <button type="submit">Sign In</button>
+    <div className="form-container">
+      <form className="form-group row" onSubmit={handleSubmit}>
+        <div className="col-sm-10 col-md-12 col-lg-12">
+          <input
+            className="form-control"
+            name="username"
+            placeholder="Username"
+            id="inputUsername"
+          />
         </div>
-        {error && error.response && <div> {error.response.data} </div>}
+        <div className="col-sm-10 col-md-12 col-lg-12">
+          <input
+            className="form-control"
+            name="password"
+            placeholder="Password"
+            id="inputPassword"
+          />
+        </div>
+        {error && error.response && (
+          <small className="form-text text-muted">
+            {" "}
+            {error.response.data}{" "}
+          </small>
+        )}
+        <div>
+          <button className="btn btn-primary"> Sign In </button>
+        </div>
       </form>
     </div>
+    // <div className="form-container">
+    //   <form className="form-group row" onSubmit={handleSubmit}>
+    //     <div className="col-sm-10">
+    //       <input
+    //         className="form-control"
+    //         name="username"
+    //         placeholder="Username"
+    //         id="inputUsername"
+    //       />
+    //     </div>
+    //     <div className="col-sm-10">
+    //       <input
+    //         className="form-control"
+    //         name="password"
+    //         placeholder="Password"
+    //         id="inputPassword"
+    //       />
+    //     </div>
+    //     {error && error.response && (
+    //       <small className="form-text text-muted">
+    //         {" "}
+    //         {error.response.data}{" "}
+    //       </small>
+    //     )}
+    //     <div>
+    //       <button className="btn btn-primary" type="submit">
+    //         Sign In
+    //       </button>
+    //     </div>
+    //   </form>
+    // </div>
   );
 };
 

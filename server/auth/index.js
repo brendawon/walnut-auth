@@ -15,6 +15,7 @@ router.post("/signup", async (req, res, next) => {
     res.send({ token: await user.createToken() });
   } catch (err) {
     //send message if username already in use
+    console.log("error in signup", err);
     if (err.name === "SequelizeUniqueConstraintError") {
       res.send("Username already in use. Please try another username.");
     } else {

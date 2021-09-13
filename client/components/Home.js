@@ -5,8 +5,9 @@ const Home = (props) => {
   //mapstate to props
   const { username } = props;
   return (
-    <div>
-      <h1>Hi, {username}</h1>
+    <div className="home-page">
+      <h3>Hi, {username}</h3>
+      <img src="/squirrel-stock-photo.png" alt="squirrel" />
     </div>
   );
 };

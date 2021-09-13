@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+}
+
+form {
+  margin: 1rem;
+  padding: 2rem;
+  display: block;
+  justify-content: center;
+}
+
+input {
+  margin: 10px;
+}
+
+.navbar-brand {
+  /* override bootstrap defaults with !important*/
+  color: #083163 !important;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.dropdown-toggle {
+  color: #ff595c !important;
+}
+
+.form-container {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-page {
+  color: #083163;
+  letter-spacing: 1px;
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+}
